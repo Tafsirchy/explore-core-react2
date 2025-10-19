@@ -1,4 +1,5 @@
-import { use } from "react"
+import { use } from "react";
+import Frnd from "./Frnd";
 
 // export default function Frnds({frndsPromise}) {
 export default function Frnds({fetchFrnds}) {
@@ -8,6 +9,9 @@ export default function Frnds({fetchFrnds}) {
     return(
         <div className="card">
             <h1>Bondhu: {frnds.length} </h1>
+            {
+                frnds.map(frnd =>  <Frnd key={frnd.id} frnd={frnd}></Frnd>)
+            }
         </div>
     )
 }
